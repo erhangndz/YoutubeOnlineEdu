@@ -48,6 +48,8 @@ namespace OnlineEdu.API.Controllers
             var value = _mapper.Map<About>(updateAboutDto);
             _aboutService.TUpdate(value);
             return Ok("Hakkımda Alanı Güncellendi");
+
         }
     }
 }
+
