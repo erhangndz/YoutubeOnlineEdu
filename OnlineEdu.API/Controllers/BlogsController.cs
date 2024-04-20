@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using OnlineEdu.Business.Abstract;
 using OnlineEdu.DTO.DTOs.AboutDtos;
+using OnlineEdu.DTO.DTOs.BlogCategoryDtos;
 using OnlineEdu.DTO.DTOs.BlogDtos;
 using OnlineEdu.Entity.Entities;
 
@@ -16,7 +17,8 @@ namespace OnlineEdu.API.Controllers
         public IActionResult Get()
         {
             var values = _blogService.TGetList();
-            return Ok(values);
+            var blogs = _mapper.Map<List<ResultBlogDto>>(values);
+            return Ok(blogs);
         }
 
         [HttpGet("{id}")]

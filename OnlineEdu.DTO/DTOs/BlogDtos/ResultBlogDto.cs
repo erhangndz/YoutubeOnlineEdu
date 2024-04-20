@@ -15,9 +15,7 @@ namespace OnlineEdu.DTO.DTOs.BlogDtos
         public string Content { get; set; }
         public string ImageUrl { get; set; }
         public DateTime BlogDate { get; set; }
-
         public int BlogCategoryId { get; set; }
-
         public ResultBlogCategoryDto BlogCategory { get; set; }
     }
 }
