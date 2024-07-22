@@ -10,7 +10,7 @@ namespace OnlineEdu.API.Mapping
         {
             CreateMap<CreateBlogCategoryDto, BlogCategory>().ReverseMap();
             CreateMap<UpdateBlogCategoryDto, BlogCategory>().ReverseMap();
-            CreateMap<ResultBlogCategoryDto, BlogCategory>().ForMember(dst=>dst.Blogs,opt=>opt.MapFrom(src=>src.Blogs)).ReverseMap();
+            CreateMap<ResultBlogCategoryDto, BlogCategory>().ReverseMap();
         }
     }
 }

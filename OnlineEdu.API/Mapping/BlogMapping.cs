@@ -10,8 +10,6 @@ namespace OnlineEdu.API.Mapping
         {
             CreateMap<CreateBlogDto, Blog>().ReverseMap();
             CreateMap<UpdateBlogDto, Blog>().ReverseMap();
-
-
             CreateMap<Blog, ResultBlogDto>().ReverseMap();
         }
     }
