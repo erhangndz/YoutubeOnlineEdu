@@ -1,0 +1,102 @@
+.about-area{
+    // left content
+    .about-caption{
+        @media #{$xs}{
+            margin-bottom: 35px;
+        }
+         p{
+            font-size: 16px;
+            color: #64676c;
+            line-height: 1.6;
+            margin-bottom: 35px;
+            padding-right: 50px;
+            @media #{$lg}{
+                padding-right: 20px;
+            }
+            @media #{$sm}{
+                padding-right: 0px;
+            }
+            @media #{$xs}{
+                padding-right: 0px;
+            }
+        }
+        ul{
+            margin-bottom: 75px;
+            @media #{$xs}{
+                margin-bottom: 50px;
+            }
+            @media #{$sm}{
+                margin-bottom: 50px;
+            }
+            li{
+                color: #000;
+                font-size: 16px;
+                span{
+                    color: #2d3092;
+                    font-size: 30px;
+                    position: relative;
+                    top: 4px;
+                    margin-right: 14px;
+                }
+            }
+        }
+    }
+    // Right img
+    .about-img{
+        position: relative;
+        .about-font-img{
+            position: absolute;
+            z-index: 0;
+            left: 0;
+            & img{
+                @media #{$xs}{
+                    width: 100%;
+                }
+            }
+        }
+        
+        .about-back-img{
+            position: absolute;
+            top: 60px;
+            right: -180px;
+            z-index: 1;
+            @media #{$lg}{
+                right: -10px;
+            }
+            & img{
+                @media #{$xs}{
+                    width: 90%;
+                }
+            }
+            @media #{$md}{
+                position: unset;
+            }
+            @media #{$sm}{
+                position: unset;
+            }
+            @media #{$xs}{
+                position: unset;
+            }
+        }
+    }
+}
+
+
+//About Details page
+.about-details{
+	.about-details-cap{
+		h4{
+			font-size: 30px;
+			font-family: $font_1;
+			font-weight: 700;
+			margin-bottom:30px;
+			color:#000a2d;
+			display: inline-block;
+		}
+		p{
+			color: #464d65;
+			font-size: 16px;
+		}
+	}
+  }
+  

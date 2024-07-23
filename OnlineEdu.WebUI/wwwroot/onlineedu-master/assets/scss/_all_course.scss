@@ -1,0 +1,43 @@
+.all-course{
+
+    // Tabs Button Style
+        .nav-tabs {
+            .nav-item {
+                // padding-bottom: 10px;
+                 display: block;
+                 color: #051441;
+                 text-transform: capitalize;
+                 font-size: 16px;
+                 font-weight: 500;
+             }
+            .nav-link {
+                border: 0;
+                padding: 0;
+                margin: 0 34px;
+                margin-bottom: 31px;
+                position: relative;
+                background:none;
+                font-family: $font_3;
+                @media #{$lg}{
+                   margin-bottom: 10px;
+                }
+                @media #{$md}{
+                  margin: 0 43px 24px 0px;
+                }
+                @media #{$sm}{
+                    margin: 0 43px 24px 0px;
+                }
+                @media #{$xs}{
+                    margin: 0 20px 24px 10px;
+                }
+            }
+        }
+        .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+            color: $theme-color;
+            background: none;
+        }
+}
+
+.tab-pane{
+    @include transition(.6s);
+}
