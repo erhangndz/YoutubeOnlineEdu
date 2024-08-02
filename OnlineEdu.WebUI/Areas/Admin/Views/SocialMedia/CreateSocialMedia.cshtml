@@ -1,0 +1,22 @@
+﻿@model CreateSocialMediaDto
+@{
+    ViewData["Title"] = "Yeni Sosyal Medya Ekleme Sayfası";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<form method="post">
+
+    <label>Sosyal Medya Adı</label>
+    <input type="text" asp-for="Title" class="form-control" />
+    <br />
+    <label>Sosyal Medya Url Linki</label>
+    <input type="text" asp-for="Url" class="form-control" />
+    <br />
+    <label>İkon</label>
+    <input type="text" asp-for="Icon" class="form-control" />
+    <br />
+
+    <button class="btn btn-outline-primary">Kaydet</button>
+</form>
+
