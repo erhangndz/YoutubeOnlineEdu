@@ -1,0 +1,60 @@
+﻿@model List<ResultCourseDto>
+
+<div class="popular-course section-padding30">
+    <div class="container">
+        <div class="row justify-content-sm-center">
+            <div class="cl-xl-7 col-lg-8 col-md-10">
+                <!-- Section Tittle -->
+                <div class="section-tittle text-center mb-70">
+                    <span>En Popüler Kurslarımız</span>
+                    <h2>Popüler Kurslarımıza Göz Atın</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                
+            <div class="col-xl-4 col-lg-4 col-md-6">
+                <!-- Single course -->
+                <div class="single-course mb-40">
+                    <div class="course-img">
+                        <img src="@item.ImageUrl" alt="">
+                    </div>
+                    <div class="course-caption">
+                        <div class="course-cap-top">
+                            <h4><a href="#">@item.CourseName</a></h4>
+                        </div>
+                        <div class="course-cap-mid d-flex justify-content-between">
+                            <div class="course-ratting">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <ul><li>52 Review</li></ul>
+                        </div>
+                        <div class="course-cap-bottom d-flex justify-content-between">
+                            <ul>
+                                <li><i class="ti-user"></i> 562</li>
+                                <li><i class="ti-heart"></i> 562</li>
+                            </ul>
+                            <span>@item.Price ₺</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            }
+            
+        </div>
+        <!-- Section Button -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="browse-btn2 text-center mt-50">
+                    <a href="#" class="btn">Tüm Kurslara Göz At</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

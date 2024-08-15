@@ -1,0 +1,42 @@
+﻿@model List<ResultCourseCategoryDto>
+
+<div class="categories-area section-padding30">
+    <div class="container">
+        <div class="row justify-content-sm-center">
+            <div class="cl-xl-7 col-lg-8 col-md-10">
+                <!-- Section Title -->
+                <div class="section-tittle text-center mb-70">
+                    <span>Kurs Kategorilerimiz</span>
+                    <h2>Popüler Kategorilere Göz Atın</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="single-cat mb-50">
+                    <div class="cat-icon">
+                        <span class="@item.Icon"></span>
+                    </div>
+                    <div class="cat-cap">
+                        <h5><a href="#">@item.Name</a></h5>
+                        <p>@(item.Description.Length>100 ? item.Description.Substring(0,100): item.Description)</p>
+                        <a href="#" class="read-more1">Kursları İncele ></a>
+                    </div>
+                </div>
+            </div>
+            }
+            
+        </div>
+        <!-- Section Button -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="browse-btn2 text-center mt-50">
+                    <a href="#" class="btn">Tüm Kurslara Göz Atın</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -10,6 +10,7 @@ namespace OnlineEdu.WebUI.Areas.Admin.Controllers
     public class AboutController : Controller
     {
         private readonly HttpClient _client = HttpClientInstance.CreateClient();
+       
         public async Task<IActionResult> Index()
         {
             
