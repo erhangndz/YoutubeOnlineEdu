@@ -27,6 +27,8 @@
     <link rel="stylesheet" href="~/onlineedu-master/assets/css/slick.css">
     <link rel="stylesheet" href="~/onlineedu-master/assets/css/nice-select.css">
     <link rel="stylesheet" href="~/onlineedu-master/assets/css/style.css">
+    <link rel="stylesheet" href="~/Login & Signup Form/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0">
 </head>
 <body>
     <!--? Preloader Start -->
@@ -66,8 +68,8 @@
                                 </div>
                                 <div class="header-info-right">
                                     <ul>
-                                        <li><a href="#"><i class="ti-user"></i>Giriş Yap</a></li>
-                                        <li><a href="#"><i class="ti-lock"></i>Kayıt Ol</a></li>
+                                        <li>  <button class="login-btn"><i class="ti-user"></i> Giriş Yap</button></li>
+                                        
                                     </ul>
                                 </div>
                             </div>
@@ -123,6 +125,83 @@
     </header>
     <main>
        @RenderBody()
+
+        <div class="blur-bg-overlay"></div>
+        <div class="form-popup">
+            <span class="close-btn material-symbols-rounded">close</span>
+            <div class="form-box login">
+                <div class="form-details">
+                    <h2>Welcome Back</h2>
+                    <p>Please log in using your personal information to stay connected with us.</p>
+                </div>
+                <div class="form-content">
+                    <h2>LOGIN</h2>
+                    <form action="#">
+                        <div class="input-field">
+                            <input type="text" required>
+                            <label>Email</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" required>
+                            <label>Password</label>
+                        </div>
+                        <a href="#" class="forgot-pass-link">Forgot password?</a>
+                        <button type="submit">Log In</button>
+                    </form>
+                    <div class="bottom-link">
+                        Don't have an account?
+                        <a href="#" id="signup-link">Signup</a>
+                    </div>
+                </div>
+            </div>
+            <div class="form-box signup">
+                <div class="form-details">
+                    <h2>Create Account</h2>
+                    <p>To become a part of our community, please sign up using your personal information.</p>
+                </div>
+                <div class="form-content">
+                    <h2>Kullanıcı Kaydı</h2>
+                    <form action="#">
+                        <div class="input-field">
+                            <input type="text" required>
+                            <label>Ad</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" required>
+                            <label>Soyad</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" required>
+                            <label>Kullanıcı Adınız</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" required>
+                            <label>Email Adresiniz</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" required>
+                            <label>Şifreniz</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" required>
+                            <label>Şifre Tekrar</label>
+                        </div>
+                        <div class="policy-text">
+                            <input type="checkbox" id="policy">
+                            <label for="policy">
+                                I agree the
+                                <a href="#" class="option">Terms & Conditions</a>
+                            </label>
+                        </div>
+                        <button type="submit">Sign Up</button>
+                    </form>
+                    <div class="bottom-link">
+                        Already have an account?
+                        <a href="#" id="login-link">Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
         <!--? Footer Start-->
@@ -274,6 +353,7 @@
     <script src="~/onlineedu-master/assets/js/jquery.ajaxchimp.min.js"></script>
     <script src="~/onlineedu-master/assets/js/plugins.js"></script>
     <script src="~/onlineedu-master/assets/js/main.js"></script>
+    <script src="~/Login & Signup Form/script.js" defer></script>
 
 </body>
 </html>

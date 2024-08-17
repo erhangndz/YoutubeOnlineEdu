@@ -1,0 +1,39 @@
+﻿
+@model UserRegisterDto
+@{
+    Layout = "~/Views/UILayout/Layout.cshtml";
+}
+
+
+
+
+<div class="container">
+
+ <form method="post">
+    <label>Ad</label>
+    <input type="text" asp-for="FirstName" class="form-control" />
+    <br />
+    <label>Soyad</label>
+    <input type="text" asp-for="LastName" class="form-control" />
+    <br />
+    <label>Kullanıcı Adı</label>
+    <input type="text" asp-for="UserName" class="form-control" />
+    <br />
+    <label>Email</label>
+    <input type="email" asp-for="Email" class="form-control" />
+    <br />
+    <label>Şifre</label>
+    <input type="password" asp-for="Password" class="form-control" />
+    <br />
+    <label>Şifre Tekrar</label>
+    <input type="password" asp-for="ConfirmPassword" class="form-control" />
+    <br />
+    <p class="text-danger">
+        @Html.ValidationSummary()
+    </p>
+
+    <button class="btn btn-primary">Kayıt Ol</button>
+</form> 
+
+</div>
+

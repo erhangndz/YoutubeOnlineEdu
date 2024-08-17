@@ -13,5 +13,8 @@ namespace OnlineEdu.Entity.Entities
         public string LastName { get; set; }
         public string? ImageUrl { get; set; }
 
+        public List<Course> Courses { get; set; }
+        public List<CourseRegister> CourseRegisters { get; set; }
+
     }
 }
