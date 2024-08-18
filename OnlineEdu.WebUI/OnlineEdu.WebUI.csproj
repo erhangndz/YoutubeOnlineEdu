@@ -12,6 +12,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\login-form-07\.DS_Store" />
+    <None Include="wwwroot\login-form-07\css\.DS_Store" />
+    <None Include="wwwroot\login-form-07\fonts\.DS_Store" />
+    <None Include="wwwroot\login-form-07\images\.DS_Store" />
+    <None Include="wwwroot\login-form-07\scss\.DS_Store" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.9.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.8">
       <PrivateAssets>all</PrivateAssets>

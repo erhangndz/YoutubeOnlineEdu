@@ -1,9 +1,8 @@
-﻿
-@model UserRegisterDto
+﻿@model UserLoginDto
 @{
+    ViewData["Title"] = "SignIn";
     Layout = "~/Views/UILayout/Layout.cshtml";
 }
-
 
 <!doctype html>
 <html lang="en">
@@ -23,7 +22,7 @@
     <!-- Style -->
     <link rel="stylesheet" href="~/login-form-07/css/style.css">
 
-    <title>Online Edu Kullanıcı Kayıt Sayfası</title>
+    <title>Online Edu | Giriş Sayfası</title>
 </head>
 <body>
 
@@ -44,39 +43,23 @@
                             </div>
                             <form method="post">
                                 <div class="form-group first">
-                                    <label for="username">Ad</label>
-                                    <input type="text" asp-for="FirstName" class="form-control" >
-                                </div>
-                                <div class="form-group first">
-                                    <label for="username">Soyad</label>
-                                    <input type="text" asp-for="LastName" class="form-control">
-                                </div>
-                                <div class="form-group first">
                                     <label for="username">Email</label>
                                     <input type="email" asp-for="Email" class="form-control">
                                 </div>
-                                <div class="form-group first">
-                                    <label for="username">Kullanıcı Adı</label>
-                                    <input type="text" asp-for="UserName" class="form-control">
-
-                                </div>
+                                
                                 <div class="form-group last mb-4">
                                     <label for="password">Şifre</label>
                                     <input type="password" asp-for="Password" class="form-control" id="password">
 
                                 </div>
-                                <div class="form-group last mb-4">
-                                    <label for="password">Şifreyi Tekrar Girin</label>
-                                    <input type="password" asp-for="ConfirmPassword" class="form-control" id="password">
-
-                                </div>
+                               
 
                                 <p style="color:red">
                                     @Html.ValidationSummary()
                                 </p>
-                                <input type="submit" value="Kayıt Ol" class="btn btn-block btn-primary">
+                                <input type="submit" value="Giriş Yap" class="btn btn-block btn-primary">
 
-                               
+
                             </form>
                         </div>
                     </div>
@@ -94,7 +77,6 @@
     <script src="~/login-form-07/js/main.js"></script>
 </body>
 </html>
-
 
 
 
