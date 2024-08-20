@@ -1,0 +1,26 @@
+﻿@using OnlineEdu.WebUI.DTOs.UserDtos
+@model List<AssignRoleDto>
+@{
+    ViewData["Title"] = "Rol Atama Sayfası";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<form method="post">
+
+
+    @for(int i=0;i<Model.Count;i++)
+    {
+        <div class="form-check">
+
+            <input type="hidden" asp-for="@Model[i].RoleId" />
+            <input type="hidden" asp-for="@Model[i].RoleName" />
+            <input type="checkbox" asp-for="@Model[i].RoleExist" class="form-check-input" />
+            <label class="form-check-label" for="@Model[i].RoleExist">@Model[i].RoleName</label>
+        </div>
+    }
+
+    <button class="btn btn-outline-primary">Rolleri Ata</button>
+
+</form>
+
