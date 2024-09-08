@@ -1,0 +1,25 @@
+﻿@model UpdateCourseDto
+@{
+    ViewData["Title"] = "Kurs Güncelleme Sayfası";
+    Layout = "~/Areas/Teacher/Views/TeacherLayout/Index.cshtml";
+}
+
+<form method="post">
+    <input type="hidden" asp-for="CourseId" />
+    <label>Kurs Adı</label>
+    <input type="text" asp-for="CourseName" class="form-control" />
+    <br />
+    <label>Kurs Resmi</label>
+    <input type="text" asp-for="ImageUrl" class="form-control" />
+    <br />
+    <label>Kategori</label>
+    <select asp-items="@ViewBag.categories" asp-for="CourseCategoryId" class="form-control">
+        <option>Kategoriyi Seçin</option>
+    </select>
+    <br />
+    <label>Kurs Fiyatı</label>
+    <input type="number" asp-for="Price" class="form-control" />
+    <br />
+    <button class="btn btn-outline-primary">Güncelle</button>
+</form>
+
