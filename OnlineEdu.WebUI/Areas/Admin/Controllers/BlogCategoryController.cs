@@ -37,16 +37,20 @@ namespace OnlineEdu.WebUI.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateBlogCategory(CreateBlogCategoryDto createBlogCategoryDto)
         {
-            var validator = new BlogCategoryValidator();
-           var result =  await validator.ValidateAsync(createBlogCategoryDto);
-            if (!result.IsValid)
+            // var validator = new BlogCategoryValidator();
+            //var result =  await validator.ValidateAsync(createBlogCategoryDto);
+            // if (!result.IsValid)
+            // {
+            //     ModelState.Clear();
+            //     foreach (var x in result.Errors)
+            //     {
+            //         ModelState.AddModelError(x.PropertyName, x.ErrorMessage);
+            //     }
+            //     return View();
+            // }
+            if (!ModelState.IsValid)
             {
-                ModelState.Clear();
-                foreach (var x in result.Errors)
-                {
-                    ModelState.AddModelError(x.PropertyName, x.ErrorMessage);
-                }
-                return View();
+                return View(createBlogCategoryDto);
             }
             await _client.PostAsJsonAsync("blogcategories", createBlogCategoryDto);
             return RedirectToAction(nameof(Index));

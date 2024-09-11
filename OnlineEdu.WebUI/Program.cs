@@ -1,3 +1,5 @@
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
 using OnlineEdu.DataAccess.Context;
 using OnlineEdu.Entity.Entities;
@@ -27,7 +29,10 @@ builder.Services.ConfigureApplicationCookie(cfg =>
 
 });
 
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews().AddFluentValidation(cfg =>
+{
+    cfg.RegisterValidatorsFromAssembly(Assembly.GetExecutingAssembly());
+});
 
 var app = builder.Build();
 
