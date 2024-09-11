@@ -29,10 +29,10 @@ builder.Services.ConfigureApplicationCookie(cfg =>
 
 });
 
-builder.Services.AddControllersWithViews().AddFluentValidation(cfg =>
-{
-    cfg.RegisterValidatorsFromAssembly(Assembly.GetExecutingAssembly());
-});
+
+builder.Services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly()).AddFluentValidationAutoValidation().AddFluentValidationClientsideAdapters();
+
+builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
