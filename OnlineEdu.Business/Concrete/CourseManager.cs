@@ -27,6 +27,11 @@ namespace OnlineEdu.Business.Concrete
           return _courseRepository.GetAllCoursesWithCategories();
         }
 
+        public List<Course> TGetCoursesByTeacherId(int id)
+        {
+            return _courseRepository.GetCoursesByTeacherId(id);
+        }
+
         public void TShowOnHome(int id)
         {
            _courseRepository.ShowOnHome(id);

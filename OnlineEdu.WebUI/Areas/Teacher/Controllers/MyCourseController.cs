@@ -24,7 +24,7 @@ namespace OnlineEdu.WebUI.Areas.Teacher.Controllers
         public async Task<IActionResult> Index()
         {
             var user = await _userManager.FindByNameAsync(User.Identity.Name);
-
+          
             var values = await _client.GetFromJsonAsync<List<ResultCourseDto>>("courses/GetCoursesByTeacherId/" + user.Id);
             return View(values);
         }

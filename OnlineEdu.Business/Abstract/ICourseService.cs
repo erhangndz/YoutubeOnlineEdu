@@ -13,5 +13,7 @@ namespace OnlineEdu.Business.Abstract
         void TDontShowOnHome(int id);
 
         List<Course> TGetAllCoursesWithCategories();
+
+        List<Course> TGetCoursesByTeacherId(int id);
     }
 }
