@@ -26,7 +26,7 @@
             <td><img src="@item.ImageUrl" style="height:75px;width:75px" /></td>
             <td>@item.Title</td>
             <td>@item.BlogDate.ToShortDateString()</td>
-            <td>@item.BlogCategoryId</td>
+            <td>@item.BlogCategory.Name</td>
             <td>
                 <button onclick="deleteMyBlog(@item.BlogId)" class="btn btn-outline-danger">Sil</button>
                 <a asp-action="UpdateBlog" asp-controller="MyBlog" asp-area="Teacher" asp-route-id="@item.BlogId" class="btn btn-outline-info">Güncelle</a>

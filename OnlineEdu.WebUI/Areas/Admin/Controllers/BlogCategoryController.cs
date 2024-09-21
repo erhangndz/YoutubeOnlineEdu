@@ -48,6 +48,7 @@ namespace OnlineEdu.WebUI.Areas.Admin.Controllers
             //     }
             //     return View();
             // }
+            
             if (!ModelState.IsValid)
             {
                 return View(createBlogCategoryDto);
