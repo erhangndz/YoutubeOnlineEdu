@@ -1,0 +1,13 @@
+﻿@model List<ResultSocialMediaDto>
+
+
+<div class="header-left-social">
+    <ul class="header-social">
+        @foreach (var item in Model)
+        {
+            
+        <li><a href="@item.Url" alt="@item.Title"><i class="@item.Icon"></i></a></li>
+        }
+       
+    </ul>
+</div>

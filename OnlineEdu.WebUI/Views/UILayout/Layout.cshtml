@@ -49,27 +49,18 @@
             <div class="main-header ">
                 <div class="header-top d-none d-lg-block">
                     <!-- Left Social -->
-                    <div class="header-left-social">
-                        <ul class="header-social">
-                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                            <li> <a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-                        </ul>
-                    </div>
+                    @await Component.InvokeAsync("_UILayoutHeaderSocialMediaComponent")
+
                     <div class="container">
                         <div class="col-xl-12">
                             <div class="row d-flex justify-content-between align-items-center">
-                                <div class="header-info-left">
-                                    <ul>
-                                        <li>needhelp@gmail.com</li>
-                                        <li>666 7475 25252</li>
-                                    </ul>
-                                </div>
+
+                                @await Component.InvokeAsync("_UILayoutHeaderContactInfoComponent")
+
                                 <div class="header-info-right">
                                     <ul>
-                                        <li>  <button class="login-btn"><i class="ti-user"></i> Giriş Yap</button></li>
-                                        
+                                        <li><a href="/Login/SignIn"><i class="ti-user"></i>Giriş Yap</a></li>
+                                        <li><a href="/Register/Signup"><i class="ti-lock"></i>Kayıt Ol</a></li>
                                     </ul>
                                 </div>
                             </div>
