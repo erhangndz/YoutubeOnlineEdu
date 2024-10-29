@@ -1,0 +1,51 @@
+﻿@model List<ResultUserDto>
+
+<div class="team-area pt-160 pb-160 section-bg" data-background="/onlineedu-master/assets/img/gallery/section_bg02.png">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="cl-xl-7 col-lg-8 col-md-10">
+                <!-- Section Tittle -->
+                <div class="section-tittle section-tittle2 text-center mb-70">
+                    <span>Eğitmenlerimiz</span>
+                    <h2>Alanında Uzman Eğitim Kadromuz</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="single-team mb-30">
+                        <div class="team-img">
+                          
+                            <img src="~/onlineedu-master/assets/img/blog/author.png" alt="">
+                        <!-- Blog Social -->
+                        <ul class="team-social">
+                            @foreach (var social in item.TeacherSocials)
+                                {
+                                    
+                            <li><a href="@social.Url"><i class="@social.Icon"></i></a></li>
+                                }
+                            
+                        </ul>
+                    </div>
+                    <div class="team-caption">
+                        <h3><a href="#">@item.FirstName @item.LastName</a></h3>
+                        <p>Eğitmen</p>
+                    </div>
+                </div>
+            </div>
+            }
+     
+        </div>
+        <!-- Section Button -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="browse-btn2 text-center mt-70">
+                    <a href="#" class="btn white-btn">Tüm Eğitmenleri Gör</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

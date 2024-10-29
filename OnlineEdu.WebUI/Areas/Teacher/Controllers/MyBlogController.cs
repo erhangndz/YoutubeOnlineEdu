@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using OnlineEdu.Entity.Entities;
@@ -8,6 +9,7 @@ using OnlineEdu.WebUI.Helpers;
 
 namespace OnlineEdu.WebUI.Areas.Teacher.Controllers
 {
+    [Authorize(Roles = "Teacher")]
     [Area("Teacher")]
     public class MyBlogController(UserManager<AppUser> _userManager) : Controller
     {
