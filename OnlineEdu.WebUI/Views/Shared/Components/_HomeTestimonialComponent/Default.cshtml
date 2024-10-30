@@ -1,0 +1,67 @@
+﻿@model List<ResultTestimonialDto>
+
+
+<div class="testimonial-area fix pt-180 pb-180 section-bg" data-background="/onlineedu-master/assets/img/gallery/section_bg03.png">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-8 col-lg-9 col-md-9">
+                <div class="h1-testimonial-active">
+                    <!-- Single Testimonial -->
+
+                    @foreach (var item in Model)
+                    {
+                        
+                    <div class="single-testimonial pt-65">
+                        <!-- Testimonial tittle -->
+                        <div class="testimonial-icon mb-45">
+                            <img src="@item.ImageUrl" class="ani-btn " alt="">
+                        </div>
+                        <!-- Testimonial Content -->
+                        <div class="testimonial-caption text-center">
+                            <p>
+                               @item.Comment
+                            </p>
+                            <!-- Rattion -->
+                            <div class="testimonial-ratting">
+                                @if(item.Star==1){
+                                        <i class="fas fa-star"></i>
+                                    }
+                                    @if(item.Star==2){
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    }
+                                    @if (item.Star == 3)
+                                    {
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    }
+                                    @if (item.Star == 4)
+                                    {
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    }
+                                    @if (item.Star == 5)
+                                    {
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    }
+                                </div>
+                            <div class="rattiong-caption">
+                                <span>@item.Name<span> - @item.Title</span> </span>
+                            </div>
+                        </div>
+                    </div>
+                    }
+                    <!-- Single Testimonial -->
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
