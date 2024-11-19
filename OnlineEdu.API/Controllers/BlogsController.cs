@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using OnlineEdu.Business.Abstract;
+using OnlineEdu.DataAccess.Migrations;
 using OnlineEdu.DTO.DTOs.AboutDtos;
 using OnlineEdu.DTO.DTOs.BlogCategoryDtos;
 using OnlineEdu.DTO.DTOs.BlogDtos;
@@ -67,6 +68,13 @@ namespace OnlineEdu.API.Controllers
             var mappedValues = _mapper.Map<List<ResultBlogDto>>(values);
             return Ok(mappedValues);
 
+        }
+
+        [HttpGet("GetBlogCount")]
+        public IActionResult GetBlogCount()
+        {
+            var blogCount = _blogService.TCount();
+            return Ok(blogCount);
         }
     }
 }

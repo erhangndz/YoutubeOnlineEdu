@@ -63,6 +63,12 @@ namespace OnlineEdu.WebUI.Services.UserServices
             return await _userManager.Users.ToListAsync();
          }
 
+        public async Task<int> GetTeacherCount()
+        {
+            var teachers = await _userManager.GetUsersInRoleAsync("Teacher");
+            return teachers.Count();
+        }
+
         public async Task<AppUser> GetUserByIdAsync(int id)
         {
             return await _userManager.Users.FirstOrDefaultAsync(x => x.Id == id);
