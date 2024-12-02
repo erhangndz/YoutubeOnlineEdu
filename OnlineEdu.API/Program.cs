@@ -20,6 +20,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 
 builder.Services.AddServiceExtensions();
+
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
 builder.Services.AddDbContext<OnlineEduContext>(options =>

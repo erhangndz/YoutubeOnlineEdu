@@ -52,7 +52,7 @@ namespace OnlineEdu.WebUI.Services.UserServices
            
             var users = await _userManager.Users.Include(x=>x.TeacherSocials).ToListAsync();
 
-            var teachers = users.Where(user =>  _userManager.IsInRoleAsync(user, "Teacher").Result).OrderByDescending(x=>x.Id).Take(4).ToList();
+            var teachers = users.Where(user => _userManager.IsInRoleAsync(user, "Teacher").Result).OrderByDescending(x=>x.Id).Take(4).ToList();
            
             return _mapper.Map<List<ResultUserDto>>(teachers);
 
