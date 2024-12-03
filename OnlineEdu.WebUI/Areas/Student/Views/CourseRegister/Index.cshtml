@@ -31,10 +31,10 @@
         count++;
         <tr>
             <th>@count</th>
-            <th><img src="@item.ImageUrl" style="height:75px;width:75px" /></th>
-            <td>@item.CourseName</td>
-            <td>@item.Price ₺</td>
-            <td>@item.CourseCategory.Name </td>
+            <th><img src="@item.Course.ImageUrl" style="height:75px;width:75px" /></th>
+            <td>@item.Course.CourseName</td>
+            <td>@item.Course.Price ₺</td>
+            <td>@item.Course.CourseCategory.Name </td>
 
             <td>
                 <button onclick="deleteTeacherCourse(@item.CourseId)" class="btn btn-outline-danger">Sil</button>
