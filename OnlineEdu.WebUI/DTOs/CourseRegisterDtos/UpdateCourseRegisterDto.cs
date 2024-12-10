@@ -3,9 +3,9 @@ using OnlineEdu.WebUI.DTOs.CourseDtos;
 
 namespace OnlineEdu.WebUI.DTOs.CourseRegisterDtos
 {
-    public class CreateCouseRegisterDto
+    public class UpdateCourseRegisterDto
     {
-      
+        public int CourseRegisterId { get; set; }
 
         public int AppUserId { get; set; }
         public AppUser AppUser { get; set; }
