@@ -21,9 +21,9 @@
                         <span class="@item.Icon"></span>
                     </div>
                     <div class="cat-cap">
-                        <h5><a href="#">@item.Name</a></h5>
+                            <h5><a href="/Course/GetCoursesByCategoryId/@item.CourseCategoryId">@item.Name</a></h5>
                         <p>@(item.Description.Length>100 ? item.Description.Substring(0,100): item.Description)</p>
-                        <a href="#" class="read-more1">Kursları İncele ></a>
+                            <a href="/Course/GetCoursesByCategoryId/@item.CourseCategoryId" class="read-more1">Kursları İncele ></a>
                     </div>
                 </div>
             </div>

@@ -1,0 +1,46 @@
+
+
+----UI ------
+
+
+-hakkýmýzda ayrý sayfada görüntüleme
+-tüm bloglar sayfasý
+-blog detayý görüntüleme 
+-footer'da subscribe alaný 
+-footer'da social media alaný
+-alta yararlý linkler bölümü 
+-iletiþim sayfasý 
+
+
+---AccessDenied sayfasý
+---404 sayfasý 
+
+
+-----Admin-----
+
+-Dashboard sayfasý
+-aboneler sayfasý
+-kullanýcýlar kýsmýnda kullanýcýlara ait roller görüntüleme
+-siteye git alaný eklenecek 
+-çýkýþ yap eklenecek
+-tüm kullanýcýlar yanýsýra öðrenciler ve eðitmenler listeleme 
+-kurslar kýsmýnda eðitmen ismi getirme 
+
+----Teacher---- 
+-dashboard tasarýmý 
+-sidebara social media alaný eklenecek
+-profil bilgileri kýsmý 
+-çýkýþ yap 
+siteye git 
+
+
+
+---Student--- 
+-dashboard tasarýmý yapýlacak
+-profil bilgileri sayfasý 
+--CourseVideo Entity eklenip api endpointleri hazýrlanacak
+-kurslara ait videolarýn listelenmesi
+-çýkýþ yap
+-siteye git
+
+

@@ -1,0 +1,58 @@
+﻿@model List<ResultUserDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/UILayout/Layout.cshtml";
+}
+
+
+
+<main>
+    <!--? Hero Start -->
+    <div class="slider-area ">
+        <div class="slider-height2 d-flex align-items-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="hero-cap hero-cap2 text-center">
+                            <h2>Eğitmenlerimiz</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+    <!--? Team Ara Start -->
+    <div class="team-area pt-160 pb-160">
+        <div class="container">
+            <div class="row">
+                @foreach (var teacher in Model)
+                {
+                    
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="single-team mb-30">
+                        <div class="team-img">
+                            <img src="@teacher.ImageUrl" alt="" style="width:250px;height:250px">
+                            <!-- Blog Social -->
+                            <ul class="team-social">
+                                @foreach (var social in teacher.TeacherSocials)
+                                    {    
+                                <li><a href="@social.Url" target="_blank"><i class="@social.Icon"></i></a></li>
+                                    }
+                                    
+                                
+                            </ul>
+                        </div>
+                        <div class="team-caption">
+                            <h3><a href="instructor.html">@teacher.FirstName @teacher.LastName</a></h3>
+                            <p>Eğitmen</p>
+                        </div>
+                    </div>
+                </div>
+                }
+               
+            </div>
+        </div>
+    </div>
+    <!-- Team Ara End -->
+</main>
