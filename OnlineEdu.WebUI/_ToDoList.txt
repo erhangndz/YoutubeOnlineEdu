@@ -3,7 +3,6 @@
 ----UI ------
 
 
--hakkýmýzda ayrý sayfada görüntüleme
 -tüm bloglar sayfasý
 -blog detayý görüntüleme 
 -footer'da subscribe alaný 

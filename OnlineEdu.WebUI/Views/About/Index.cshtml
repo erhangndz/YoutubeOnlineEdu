@@ -1,0 +1,90 @@
+﻿@model List<ResultAboutDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/UILayout/Layout.cshtml";
+}
+
+
+    <!--? Hero Start -->
+    <div class="slider-area">
+        <div class="slider-height2 d-flex align-items-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="hero-cap hero-cap2 text-center">
+                            <h2>Hakkımızda</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+    <!-- About Details Start -->
+    @foreach (var item in Model)
+{
+    
+    <div class="about-details section-padding30">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="about-details-cap mb-50">
+                        <h4>Şirketimiz Hakkında</h4>
+                        <p>
+                           @item.Description
+
+                        </p>
+                       
+                    </div>
+
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+}
+    <!-- About Details End -->
+    
+    <!--? About  Start-->
+    @foreach (var item in Model)
+{
+    
+    <div class="about-area section-padding2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <div class="about-caption mb-50">
+                        <!-- Section Tittle -->
+                        <div class="section-tittle mb-35">
+                            <span>Hakkımızda Merak Edilenler</span>
+                           
+                        </div>
+                        <p>@item.Description</p>
+                        <ul>
+                            
+                            <li><span class="flaticon-business"></span> @item.Item1</li>
+                            <li><span class="flaticon-communications-1"></span> @item.Item2</li>
+                            <li><span class="flaticon-graduated"></span> @item.Item3</li>
+                            <li><span class="flaticon-tools-and-utensils"></span> @item.Item4</li>
+                        </ul>
+                       
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <!-- about-img -->
+                    <div class="about-img ">
+                        <div class="about-font-img d-none d-lg-block">
+                            <img src="@item.ImageUrl1" alt="">
+                        </div>
+                        <div class="about-back-img ">
+                            <img src="@item.ImageUrl2" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+    <!-- About Law End-->
+
+
