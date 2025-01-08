@@ -1,10 +1,10 @@
 ﻿
-@model CreateSubscriberDto
+
 <aside class="single_sidebar_widget newsletter_widget">
     <h4 class="widget_title" style="color: #2d2d2d;">Abone Bülteni</h4>
-    <form asp-action="Subscribe" asp-controller="Blog">
+    <form method="post" asp-action="Subscribe" asp-controller="Blog">
         <div class="form-group">
-            <input type="email" asp-for="Email" class="form-control" onfocus="this.placeholder = ''"
+            <input type="email" name="Email" class="form-control" onfocus="this.placeholder = ''"
                    onblur="this.placeholder = 'Emailinizi Yazın'" placeholder='Emailinizi Yazın' required>
         </div>
         <button onclick="subscribe()" class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"

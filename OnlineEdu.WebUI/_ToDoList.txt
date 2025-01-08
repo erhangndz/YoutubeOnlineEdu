@@ -4,7 +4,7 @@
 
 
 
--blog detayý görüntüleme 
+
 -footer'da subscribe alaný 
 -footer'da social media alaný
 -alta yararlý linkler bölümü 

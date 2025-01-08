@@ -1,0 +1,14 @@
+﻿<div class="footer-form mb-50">
+    
+        <form method="post" asp-action="Subscribe" asp-controller="Blog">
+            <div class="form-group">
+                <input type="email" name="Email" class="form-control" onfocus="this.placeholder = ''"
+                       onblur="this.placeholder = 'Emailinizi Yazın'" placeholder='Emailinizi Yazın' required="">
+            </div>
+            <button onclick="subscribe()" class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
+                    type="submit">
+                Abone Ol
+            </button>
+        </form>
+   
+</div>
