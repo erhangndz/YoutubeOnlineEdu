@@ -5,10 +5,10 @@
 
 
 
--footer'da subscribe alaný 
--footer'da social media alaný
--alta yararlý linkler bölümü 
--iletiþim sayfasý 
+
+
+
+-iletiþim sayfasý iletiþim bilgileri
 
 
 ---AccessDenied sayfasý

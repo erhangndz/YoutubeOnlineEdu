@@ -139,13 +139,7 @@
                                     <h4>Let’s Get Social</h4>
                                 </div>
                                 <!-- Footer Social -->
-                                <div class="footer-social">
-                                    <a href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#"><i class="fab fa-twitter"></i></a>
-                                    <a href="#"><i class="fab fa-google"></i></a>
-                                    <a href="#"><i class="fab fa-instagram"></i></a>
-                                    <a href="#"><i class="fab fa-youtube"></i></a>
-                                </div>
+                                @await Component.InvokeAsync("_UILayoutSocialMedia")
                             </div>
                         </div>
                     </div>
@@ -154,13 +148,13 @@
                         <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
                             <div class="single-footer-caption mb-50">
                                 <div class="footer-tittle">
-                                    <h4>About Us</h4>
+                                    <h4>Hakkımızda</h4>
                                     <ul>
-                                        <li><a href="#">Online Learning</a></li>
-                                        <li><a href="#">About Us</a></li>
-                                        <li><a href="#">Careers</a></li>
-                                        <li><a href="#">Press Center</a></li>
-                                        <li><a href="#">Become an Instructor</a></li>
+                                        <li><a href="/Course/Index">Kurslarımız</a></li>
+                                        <li><a href="/About/Index">Hakkımızda</a></li>
+                                        <li><a href="/Blog/Index">Bloglar</a></li>
+                                        <li><a href="/Contact/Index">İletişim</a></li>
+                                        <li><a href="/Teacher/Index">Eğitmenler</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -168,13 +162,13 @@
                         <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
                             <div class="single-footer-caption mb-50">
                                 <div class="footer-tittle">
-                                    <h4>Campus</h4>
+                                    <h4>İçeriklerimiz</h4>
                                     <ul>
-                                        <li><a href="#">Our Plans</a></li>
-                                        <li><a href="#">Free Trial</a></li>
-                                        <li><a href="#">Academic Solutions</a></li>
-                                        <li><a href="#">Business Solutions</a></li>
-                                        <li><a href="#"> Government Solutions</a></li>
+                                        <li><a href="#">Kurslarımız</a></li>
+                                        <li><a href="#">Ücretsiz Kurslar</a></li>
+                                        <li><a href="#">Akademik Çözümler</a></li>
+                                        <li><a href="#">İş Çözümleri</a></li>
+                                       
                                     </ul>
                                 </div>
                             </div>
@@ -182,13 +176,13 @@
                         <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
                             <div class="single-footer-caption mb-50">
                                 <div class="footer-tittle">
-                                    <h4>Study</h4>
+                                    <h4>Çalışma Planı</h4>
                                     <ul>
-                                        <li><a href="#">Admissions Policy</a></li>
-                                        <li><a href="#">Getting Started</a></li>
-                                        <li><a href="#">Online Application</a></li>
-                                        <li><a href="#">Visa Information</a></li>
-                                        <li><a href="#">Tuition Calculator</a></li>
+                                        <li><a href="#">Kayıt Politikası</a></li>
+                                        <li><a href="#">Başlangıç Aşaması</a></li>
+                                        <li><a href="#">Online Başvuru</a></li>
+                                        <li><a href="#">Soru Cevap Etkinliği</a></li>
+                                        <li><a href="#">Ücretsiz Rehberlik</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -196,13 +190,13 @@
                         <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
                             <div class="single-footer-caption mb-50">
                                 <div class="footer-tittle">
-                                    <h4>Spport</h4>
+                                    <h4>Destek</h4>
                                     <ul>
-                                        <li><a href="#">Support</a></li>
-                                        <li><a href="#">Contact Us</a></li>
-                                        <li><a href="#">System Requirements</a></li>
-                                        <li><a href="#">Register Activation Key</a></li>
-                                        <li><a href="#">Site feedback</a></li>
+                                        <li><a href="#">Destek</a></li>
+                                        <li><a href="/Contact/Index">İletişim</a></li>
+                                        <li><a href="#">Sistem Gereksinimleri</a></li>
+                                        <li><a href="/Register/Index">Ücretsiz Kaydolun</a></li>
+                                        <li><a href="#">Geri Dönütler</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -216,7 +210,7 @@
                             <div class="footer-copy-right text-center">
                                 <p>
                                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> Tüm Hakları Saklıdır | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
                                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                                 </p>
                             </div>

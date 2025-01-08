@@ -1,0 +1,59 @@
+﻿@model CreateMessageDto
+
+<div class="col-lg-8">
+    <form asp-action="SendMessage" asp-controller="Contact" class="form-contact contact_form" method="post">
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                    <textarea class="form-control w-100" asp-for="Content" id="message" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Mesajınzı Yazın'" placeholder=" Mesajınızı Yazın" required></textarea>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <input class="form-control valid" asp-for="Name"  type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Adınızı Yazın'" placeholder="Adınızı Yazın" required>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <input class="form-control valid" asp-for="Email"  type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Adresinizi Yazın'" placeholder="Email Adresiniz" required>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-group">
+                    <input class="form-control" asp-for="Subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Konuyu Yazın'" placeholder="Konuyu Yazın" required>
+                </div>
+            </div>
+        </div>
+        <div class="form-group mt-3">
+            <button onclick="sendMessage()" type="submit" class="button button-contactForm boxed-btn">Mesajı Gönder</button>
+        </div>
+    </form>
+</div>
+
+
+
+<script>
+    function sendMessage() {
+
+
+
+        Swal.fire({
+            title: "Mesajınız Gönderildi",
+            text: "Size en kısa sürede cevap verilecektir.",
+            icon: "success",
+            showCancelButton: false,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Tamam",
+            cancelButtonText: "İptal"
+        }).then((result) => {
+            if (result.isConfirmed) {
+
+                window.location.href = "/Contact/Index";
+
+            }
+        });
+
+    }
+
+</script>
