@@ -4,13 +4,6 @@
 
 
 
-
-
-
-
--iletiþim sayfasý iletiþim bilgileri
-
-
 ---AccessDenied sayfasý
 ---404 sayfasý 
 
