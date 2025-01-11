@@ -1,12 +1,5 @@
 
 
-----UI ------
-
-
-
----AccessDenied sayfasý
----404 sayfasý 
-
 
 -----Admin-----
 
