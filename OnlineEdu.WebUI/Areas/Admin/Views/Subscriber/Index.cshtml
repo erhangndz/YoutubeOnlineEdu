@@ -1,0 +1,58 @@
+﻿
+@model List<ResultSubscriberDto>
+@{
+    ViewData["Title"] = "Aboneler";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+@{
+    int count = 0;
+}
+<table class="table table-hover">
+    <tr>
+        <th>#</th>
+        <th>Email</th>
+        <th>Durum</th>
+
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <th>@count</th>
+            <td> @item.Email </td>
+            @if (item.IsActive)
+            {
+                <td><span class='badge bg-success'>Aktif</span></td>
+            }
+            else
+            {
+                <td> <span class='badge bg-secondary text-white'>Onay Bekliyor</span></td>
+            }
+          
+
+            <td>
+                <a asp-action="DeleteSubscriber" asp-controller="Subscriber" asp-area="Admin" asp-route-id="@item.SubscriberId" class="btn btn-outline-danger">Sil</a>
+                @if (item.IsActive)
+                {
+                    <a asp-action="ChangeStatusSubscriber" asp-controller="Subscriber" asp-area="Admin" asp-route-id="@item.SubscriberId" class="btn btn-outline-secondary">İptal Et</a>
+                }
+                else
+                {
+                    <a asp-action="ChangeStatusSubscriber" asp-controller="Subscriber" asp-area="Admin" asp-route-id="@item.SubscriberId" class="btn btn-outline-success">Onayla</a>
+                }
+              
+
+
+            </td>
+        </tr>
+    }
+</table>
+
+<br />
+
+
+
+

@@ -120,9 +120,10 @@ namespace OnlineEdu.WebUI.Services.UserServices
 
         }
 
-        public Task<bool> LogoutAsync()
+        public async Task LogoutAsync()
         {
-            throw new NotImplementedException();
+            await _signInManager.SignOutAsync();
+           
         }
     }
 }

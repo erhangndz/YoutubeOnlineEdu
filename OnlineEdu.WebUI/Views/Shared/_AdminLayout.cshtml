@@ -211,7 +211,7 @@
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="javascript:void(0)"><i class="ti-settings m-r-5 m-l-5"></i> Account Setting</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="javascript:void(0)"><i class="fa fa-power-off m-r-5 m-l-5"></i> Logout</a>
+                                <a class="dropdown-item" href="/Login/Logout"><i class="fa fa-power-off m-r-5 m-l-5"></i> Çıkış Yap</a>
                                 <div class="dropdown-divider"></div>
                                 <div class="p-l-30 p-10"><a href="javascript:void(0)" class="btn btn-sm btn-success btn-rounded">View Profile</a></div>
                             </div>
@@ -235,6 +235,7 @@
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav" class="p-t-30">
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/Home/Index" aria-expanded="false"><i class="mdi mdi-laptop"></i><span class="hide-menu">Siteye Git</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="index.html" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Dashboard</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" asp-controller="About" asp-area="Admin" asp-action="Index" aria-expanded="false"><i class="mdi mdi-format-list-bulleted"></i><span class="hide-menu">Hakkımda</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" asp-controller="Banner" asp-area="Admin" asp-action="Index" aria-expanded="false"><i class="mdi mdi-image"></i><span class="hide-menu">Banner</span></a></li>
@@ -243,7 +244,9 @@
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" asp-controller="Contact" asp-area="Admin" asp-action="Index" aria-expanded="false"><i class="mdi mdi-phone"></i><span class="hide-menu">İletişim Bilgisi</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" asp-controller="CourseCategory" asp-area="Admin" asp-action="Index" aria-expanded="false"><i class="mdi mdi-playlist-play"></i><span class="hide-menu">Kurs Kategorileri</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" asp-controller="Course" asp-area="Admin" asp-action="Index" aria-expanded="false"><i class="mdi mdi-keyboard"></i><span class="hide-menu">Kurslar</span></a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" asp-controller="RoleAssign" asp-area="Admin" asp-action="Index" aria-expanded="false"><i class="mdi mdi-account"></i><span class="hide-menu">Kullanıcılar</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" asp-controller="RoleAssign" asp-area="Admin" asp-action="Index" aria-expanded="false"><i class="mdi mdi-account"></i><span class="hide-menu">Tüm Kullanıcılar</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" asp-controller="TeacherList" asp-area="Admin" asp-action="Index" aria-expanded="false"><i class="mdi mdi-account"></i><span class="hide-menu">Eğitmenler</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" asp-controller="StudentList" asp-area="Admin" asp-action="Index" aria-expanded="false"><i class="mdi mdi-account"></i><span class="hide-menu">Öğrenciler</span></a></li>
 
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" asp-controller="Role" asp-area="Admin" asp-action="Index" aria-expanded="false"><i class="mdi mdi-account-key"></i><span class="hide-menu">Roller</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" asp-controller="Message" asp-area="Admin" asp-action="Index" aria-expanded="false"><i class="mdi mdi-comment"></i><span class="hide-menu">Gelen Mesajlar</span></a></li>

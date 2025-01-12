@@ -1,0 +1,36 @@
+﻿@model List<AppUser>
+@{
+    ViewData["Title"] = "Öğrenciler";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+@{
+    int count = 0;
+}
+<table class="table table-hover">
+    <tr>
+        <th>#</th>
+        <th>Ad Soyad</th>
+        <th>Kullanıcı Adı</th>
+        <th>Email</th>
+
+
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <th>@count</th>
+            <td>@item.FirstName @item.LastName</td>
+            <td>@item.UserName</td>
+            <td>@item.Email</td>
+
+
+        </tr>
+    }
+</table>
+
+<br />
+
