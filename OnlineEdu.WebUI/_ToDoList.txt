@@ -10,19 +10,18 @@
 
 ----Teacher---- 
 -dashboard tasarýmý 
--sidebara social media alaný eklenecek
 -profil bilgileri kýsmý 
--çýkýþ yap 
-siteye git 
+
+--kurslara video ekleme
+
 
 
 
 ---Student--- 
 -dashboard tasarýmý yapýlacak
 -profil bilgileri sayfasý 
---CourseVideo Entity eklenip api endpointleri hazýrlanacak
--kurslara ait videolarýn listelenmesi
--çýkýþ yap
--siteye git
+
+
+
 
 

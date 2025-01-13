@@ -6,15 +6,14 @@ using System.Threading.Tasks;
 
 namespace OnlineEdu.Entity.Entities
 {
-    public class CourseRegister
+    public class CourseVideo
     {
-        public int CourseRegisterId { get; set; }
-
-        public int AppUserId { get; set; }
-        public virtual AppUser AppUser { get; set; }
+        public int CourseVideoId { get; set; }
 
         public int CourseId { get; set; }
-
         public virtual Course Course { get; set; }
+
+        public int VideoNumber { get; set; }
+        public string VideoUrl { get; set; }
     }
 }
