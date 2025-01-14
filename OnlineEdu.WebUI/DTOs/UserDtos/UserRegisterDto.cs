@@ -11,7 +11,8 @@ namespace OnlineEdu.WebUI.DTOs.UserDtos
         public string UserName { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
-        [Compare("Password",ErrorMessage ="Şifreler birbiriyle uyumlu değil.")]
+
+        [Compare("Password",ErrorMessage ="Şifreler birbiri ile uyumlu değil")]
         public string ConfirmPassword { get; set; }
     }
 }

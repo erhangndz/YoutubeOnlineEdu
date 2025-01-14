@@ -12,7 +12,7 @@
 -dashboard tasarýmý 
 -profil bilgileri kýsmý 
 
---kurslara video ekleme
+
 
 
 

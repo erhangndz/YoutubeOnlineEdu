@@ -45,29 +45,29 @@
                             <form method="post">
                                 <div class="form-group first">
                                     <label for="username">Ad</label>
-                                    <input type="text" asp-for="FirstName" class="form-control" >
+                                    <input type="text" asp-for="FirstName" class="form-control" required >
                                 </div>
                                 <div class="form-group first">
                                     <label for="username">Soyad</label>
-                                    <input type="text" asp-for="LastName" class="form-control">
+                                    <input type="text" asp-for="LastName" class="form-control" required>
                                 </div>
                                 <div class="form-group first">
                                     <label for="username">Email</label>
-                                    <input type="email" asp-for="Email" class="form-control">
+                                    <input type="email" asp-for="Email" class="form-control" required>
                                 </div>
                                 <div class="form-group first">
                                     <label for="username">Kullanıcı Adı</label>
-                                    <input type="text" asp-for="UserName" class="form-control">
+                                    <input type="text" asp-for="UserName" class="form-control" required>
 
                                 </div>
                                 <div class="form-group last mb-4">
                                     <label for="password">Şifre</label>
-                                    <input type="password" asp-for="Password" class="form-control" id="password">
+                                    <input type="password" asp-for="Password" class="form-control" id="password" required>
 
                                 </div>
                                 <div class="form-group last mb-4">
                                     <label for="password">Şifreyi Tekrar Girin</label>
-                                    <input type="password" asp-for="ConfirmPassword" class="form-control" id="password">
+                                    <input type="password" asp-for="ConfirmPassword" class="form-control" id="password" required>
 
                                 </div>
 

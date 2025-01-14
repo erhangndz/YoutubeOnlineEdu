@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using OnlineEdu.Business.Abstract;
@@ -8,10 +9,12 @@ using OnlineEdu.Entity.Entities;
 
 namespace OnlineEdu.API.Controllers
 {
+    [Authorize(Roles = "Admin, Teacher")]
     [Route("api/[controller]")]
     [ApiController]
     public class CourseCategoriesController(ICourseCategoryService _courseCategoryService,IMapper _mapper) : ControllerBase
     {
+        [AllowAnonymous]
         [HttpGet]
         public IActionResult Get()
         {
@@ -64,14 +67,14 @@ namespace OnlineEdu.API.Controllers
             _courseCategoryService.TDontShowOnHome(id);
             return Ok("Ana Sayfada Gösterilmiyor");
         }
-
+        [AllowAnonymous]
         [HttpGet("GetActiveCategories")]
         public IActionResult GetActiveCategories()
         {
             var values = _courseCategoryService.TGetFilteredList(x => x.IsShown == true);
             return Ok(values);
         }
-
+        [AllowAnonymous]
         [HttpGet("GetCourseCategoryCount")]
         public IActionResult GetCourseCategoryCount()
         {

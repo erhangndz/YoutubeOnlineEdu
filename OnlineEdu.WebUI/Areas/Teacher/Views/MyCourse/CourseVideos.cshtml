@@ -1,0 +1,35 @@
+﻿
+@model List<ResultCourseVideoDto>
+@{
+    ViewData["Title"] = "Kurs Videoları";
+    Layout = "~/Areas/Teacher/Views/TeacherLayout/Index.cshtml";
+}
+
+<h2> Kurs Adı : <strong> @ViewBag.courseName</strong></h2>
+<table class="table table-hover">
+
+    <tr>
+
+        <th>#</th>
+        <th>Video</th>
+
+
+
+
+    </tr>
+
+    @foreach (var item in Model)
+    {
+     
+        <tr>
+            <th>@item.VideoNumber</th>
+            <td> <iframe width="560" height="315" src="@item.VideoUrl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> </td>
+
+
+        </tr>
+    }
+</table>
+<br />
+
+<a href="/Teacher/MyCourse/CreateVideo" class="btn btn-outline-primary">Kursa Yeni Video Ekle</a>
+
