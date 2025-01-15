@@ -6,6 +6,7 @@ using OnlineEdu.DataAccess.Context;
 using OnlineEdu.Entity.Entities;
 using OnlineEdu.WebUI.Areas.Admin.Controllers;
 using OnlineEdu.WebUI.Services.RoleServices;
+using OnlineEdu.WebUI.Services.TokenServices;
 using OnlineEdu.WebUI.Services.UserServices;
 using OnlineEdu.WebUI.Validators;
 using System.Reflection;
@@ -16,7 +17,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IRoleService, RoleService>();
-
+builder.Services.AddScoped<ITokenService, TokenService>();
 
 
 builder.Services.AddHttpClient();
