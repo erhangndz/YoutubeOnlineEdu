@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -9,9 +10,10 @@ using System.Security.Claims;
 
 namespace OnlineEdu.API.Controllers
 {
+    [Authorize(Roles ="Admin")]
     [Route("api/[controller]")]
     [ApiController]
-    public class RoleAssignsController(IUserService _userService, UserManager<AppUser> _userManager, RoleManager<AppRole> _roleManager,IHttpContextAccessor _contextAccessor) : ControllerBase
+    public class RoleAssignsController(IUserService _userService, UserManager<AppUser> _userManager, RoleManager<AppRole> _roleManager) : ControllerBase
     {
 
         [HttpGet]
@@ -45,7 +47,7 @@ namespace OnlineEdu.API.Controllers
             foreach (var role in roles)
             {
                 var assignRole = new AssignRoleDto();
-
+                assignRole.UserId=user.Id;
                 assignRole.RoleId = role.Id;
                 assignRole.RoleName = role.Name;
                 assignRole.RoleExist = userRoles.Contains(role.Name);
@@ -59,7 +61,7 @@ namespace OnlineEdu.API.Controllers
         [HttpPost]
         public async Task<IActionResult> AssignRole(List<AssignRoleDto> assignRoleList)
         {
-            int userId = int.Parse(_contextAccessor.HttpContext.User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
+            int userId = assignRoleList.Select(x=>x.UserId).FirstOrDefault();
 
             var user = await _userService.GetUserByIdAsync(userId);
 
