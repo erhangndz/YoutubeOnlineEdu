@@ -1,20 +1,24 @@
 ﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using OnlineEdu.Entity.Entities;
 using OnlineEdu.WebUI.DTOs.BlogCategoryDtos;
 using OnlineEdu.WebUI.DTOs.BlogDtos;
-using OnlineEdu.WebUI.Helpers;
 using OnlineEdu.WebUI.Services.TokenServices;
 
 namespace OnlineEdu.WebUI.Areas.Teacher.Controllers
 {
     [Authorize(Roles = "Teacher")]
     [Area("Teacher")]
-    public class MyBlogController(ITokenService _tokenService) : Controller
+    public class MyBlogController : Controller
     {
-        private readonly HttpClient _client = HttpClientInstance.CreateClient();
+        private readonly HttpClient _client;
+        private readonly ITokenService _tokenService;
+
+        public MyBlogController(IHttpClientFactory clientFactory, ITokenService tokenService)
+        {
+            _client = clientFactory.CreateClient("EduClient");
+            _tokenService = tokenService;
+        }
         public async Task<IActionResult> Index()
         {
              var userId = _tokenService.GetUserId;

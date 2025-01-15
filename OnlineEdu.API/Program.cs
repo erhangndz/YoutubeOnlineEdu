@@ -17,6 +17,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 
 builder.Services.AddServiceExtensions(builder.Configuration);
+builder.Services.AddHttpContextAccessor();
 
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 

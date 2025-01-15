@@ -6,7 +6,12 @@ namespace OnlineEdu.WebUI.Controllers
 {
     public class CourseController : Controller
     {
-        private readonly HttpClient _client = HttpClientInstance.CreateClient();
+        private readonly HttpClient _client;
+
+        public CourseController(IHttpClientFactory clientFactory)
+        {
+            _client = clientFactory.CreateClient("EduClient");
+        }
         public async Task<IActionResult> Index()
         {
             var courses = await _client.GetFromJsonAsync<List<ResultCourseDto>>("courses");

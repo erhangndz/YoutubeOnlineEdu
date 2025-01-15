@@ -1,26 +1,31 @@
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.EntityFrameworkCore;
-using OnlineEdu.DataAccess.Context;
-using OnlineEdu.Entity.Entities;
-using OnlineEdu.WebUI.Areas.Admin.Controllers;
-using OnlineEdu.WebUI.Services.RoleServices;
+
 using OnlineEdu.WebUI.Services.TokenServices;
 using OnlineEdu.WebUI.Services.UserServices;
-using OnlineEdu.WebUI.Validators;
+using System.Net.Http.Headers;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
+
 builder.Services.AddScoped<IUserService, UserService>();
-builder.Services.AddScoped<IRoleService, RoleService>();
 builder.Services.AddScoped<ITokenService, TokenService>();
+builder.Services.AddHttpContextAccessor();
 
-
-builder.Services.AddHttpClient();
+builder.Services.AddHttpClient("EduClient", cfg =>
+{
+    var tokenService = builder.Services.BuildServiceProvider().GetRequiredService<ITokenService>();
+    var token = tokenService.GetUserToken;
+    cfg.BaseAddress = new Uri("https://localhost:7189/api/");
+    if(token != null)
+    {
+        cfg.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", tokenService.GetUserToken);
+    }
+    
+});
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddCookie(JwtBearerDefaults.AuthenticationScheme, opt =>
 {
@@ -31,6 +36,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddCo
     opt.Cookie.HttpOnly = true;
     opt.Cookie.SecurePolicy = CookieSecurePolicy.SameAsRequest;
     opt.Cookie.Name = "OnlineEduJwt";
+    opt.SlidingExpiration = true;
 });
 
 

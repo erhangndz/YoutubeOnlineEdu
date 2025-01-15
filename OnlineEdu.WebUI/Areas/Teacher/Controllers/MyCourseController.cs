@@ -1,12 +1,9 @@
 ﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using OnlineEdu.Entity.Entities;
 using OnlineEdu.WebUI.DTOs.CourseCategoryDtos;
 using OnlineEdu.WebUI.DTOs.CourseDtos;
 using OnlineEdu.WebUI.DTOs.CourseVideoDtos;
-using OnlineEdu.WebUI.Helpers;
 using OnlineEdu.WebUI.Services.TokenServices;
 
 namespace OnlineEdu.WebUI.Areas.Teacher.Controllers
@@ -15,15 +12,16 @@ namespace OnlineEdu.WebUI.Areas.Teacher.Controllers
     [Area("Teacher")]
     public class MyCourseController : Controller
     {
-        private readonly HttpClient _client = HttpClientInstance.CreateClient();
-    
+        private readonly HttpClient _client;
         private readonly ITokenService _tokenService;
 
-        public MyCourseController( ITokenService tokenService)
+        public MyCourseController(IHttpClientFactory clientFactory, ITokenService tokenService)
         {
-           
+            _client = clientFactory.CreateClient("EduClient");
             _tokenService = tokenService;
         }
+
+        
 
         public async Task<IActionResult> Index()
         {

@@ -1,11 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using OnlineEdu.Entity.Entities;
 using OnlineEdu.WebUI.DTOs.RoleDtos;
-using OnlineEdu.WebUI.Helpers;
-using OnlineEdu.WebUI.Services.RoleServices;
 
 namespace OnlineEdu.WebUI.Areas.Admin.Controllers
 {
@@ -14,8 +9,13 @@ namespace OnlineEdu.WebUI.Areas.Admin.Controllers
   
     public class RoleController : Controller
     {
-        private readonly HttpClient _client = HttpClientInstance.CreateClient();
-        
+        private readonly HttpClient _client;
+
+        public RoleController(IHttpClientFactory clientFactory)
+        {
+            _client = clientFactory.CreateClient("EduClient");
+        }
+
         public async Task<IActionResult> Index()
         {
             var values = await _client.GetFromJsonAsync<List<ResultRoleDto>>("roles");
